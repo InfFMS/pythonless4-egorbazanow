@@ -10,10 +10,12 @@
 # ********
 # *********
 # **********
-n = int(input())
-i = 1
-z = '*'
-while i !=n+1:
-    print(z*i)
-    i+=1
+def printTriangle(n):
+    i = 1
+    z = '*'
+    while i !=n+1:
+        print(z*i)
+        i+=1
 
+chislo = int(input())
+printTriangle(chislo)

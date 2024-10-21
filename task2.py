@@ -14,35 +14,24 @@
 #
 # семь
 # восемьдесят пять
-def number_to_words(num):
-    num = int(input())
-    a = ['one', 'two','three', 'four', 'five', 'six', 'seven', 'eight', ' nine', 'ten', 'eleven', 'twelve']
-    b =['twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninty']
-    if num<13:
-        return()
-    if num ==1:
-        print(a[0])
-    elif num ==2:
-        print(a[1])
-    elif num ==3:
-        print(a[2])
-    elif num == 4:
-        print(a[3])
-    elif num == 5:
-        print(a[4])
-    elif num == 6:
-        print(a[5])
-    elif num == 7:
-        print(a[6])
-    elif num == 8:
-        print(a[7])
-    elif num == 9:
-        print(a[8])
-    elif num == 10:
-        print(a[9])
-    elif num == 11:
-        print(a[10])
-    elif num == 12:
-        print(a[11])
-    elif num == 2:
-        print(a[1])
+def chet(n):
+    A = {1: 'один', 2: 'два', 3: 'три', 4: 'четыре', 5: 'пять',6: 'шесть', 7: 'семь', 8: 'восемь', 9: 'девять'}
+    B = {10: 'десять', 20: 'двадцать', 30: 'тридцать', 40: 'сорок',50: 'пятьдесят', 60: 'шестьдесят', 70: 'семьдесят',
+          80: 'восемьдесят', 90: 'девяносто'}
+    C = {11: 'одиннадцать', 12: 'двенадцать', 13: 'тринадцать',
+          14: 'четырнадцать', 15: 'пятнадцать', 16: 'шестнадцать',
+          17: 'семнадцать', 18: 'восемнадцать', 19: 'девятнадцать'}
+    n1 = n % 10
+    n2 = n - n1
+    if (n < 10):
+        print(A.get(n))
+    elif (n % 10 == 0):
+        print(B.get(n))
+    elif (n > 20):
+        print(B.get(n2) + ' ' + A.get(n1))
+    else:
+        print(C.get(n))
+
+
+n = int(input())
+chet(n)
