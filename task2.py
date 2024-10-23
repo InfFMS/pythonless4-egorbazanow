@@ -31,7 +31,5 @@ def chet(n):
         print(B.get(n2) + ' ' + A.get(n1))
     else:
         print(C.get(n))
-
-
 n = int(input())
 chet(n)

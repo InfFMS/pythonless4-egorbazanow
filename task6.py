@@ -8,4 +8,11 @@
 # 25 15
 # Вывод:
 # 5 3
-
+def reduce(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+a = int(input())
+b = int(input())
+g = reduce(a, b)
+print(a // g, '/', b // g)
