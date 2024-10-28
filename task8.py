@@ -5,20 +5,14 @@
 # 378
 # Вывод:
 # 2*3*3*3*7
-def ras(a, i, b):
-    for i in range(2, a+1):
-        if a % i == 0:
-            b = i
-    
-a = int(input())
-i = 1
-print(ras(a,i))
-
-
-
-
-
-
-
-
-
+def ras(n):
+    i = 2
+    s = ""
+    while n > 1:
+        while n % i == 0:
+            s+=str(i)+ "*"
+            n //= i
+        i += 1
+    return s[:-1]
+n = int(input())
+print(ras(n))
